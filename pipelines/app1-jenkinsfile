@@ -1,0 +1,10 @@
+@Library('shared-library@main') _
+
+standardPipeline(
+    appName: 'app1-frontend',
+    imageName: 'app1-frontend',
+    registry: 'docker.io/myorg',
+    testCommand: 'npm test',
+    environment: 'staging',
+    deployCredsId: 'app1-deploy-creds'
+)

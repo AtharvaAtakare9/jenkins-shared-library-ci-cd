@@ -1,0 +1,10 @@
+@Library('shared-library@main') _
+
+standardPipeline(
+    appName: 'app2-backend',
+    imageName: 'app2-backend',
+    registry: 'docker.io/myorg',
+    testCommand: 'mvn test',
+    environment: 'staging',
+    deployCredsId: 'app2-deploy-creds'
+)
